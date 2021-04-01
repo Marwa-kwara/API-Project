@@ -9,14 +9,15 @@ function searchMeal (query) {
         data.forEach(element => {
             const {idMeal, strMeal, strMealThumb} = element;
             renderData(idMeal, strMeal, strMealThumb);
-            //console.log(idMeal, 'strMeal : ' , strMeal); 
+            console.log(idMeal, 'strMeal : ' , strMeal); 
         });
 })}
 //searchMeal('rice');
 window.onload = () => {
-    const searchFieldElement = document.getElementById('searchField');
-    searchFieldElement.onkeyup = (event) => {
-        searchMeal(searchFieldElement.value);
+    const vv =document.getElementById('searchField');
+    const searchFieldElement = document.getElementById('searchButton');
+    searchFieldElement.onclick = (event) => {
+        searchMeal(vv.value);
     }
 }
 function renderData (idMeal, strMeal, strMealThumb){
@@ -25,6 +26,7 @@ function renderData (idMeal, strMeal, strMealThumb){
     button.innerText = strMeal;
     div .appendChild(button);
     const img = document.createElement('img');
+    img.style.width = '150px',
     img.src = strMealThumb;
     div .appendChild(img);
     document.body.appendChild(div);
