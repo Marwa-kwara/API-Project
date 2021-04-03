@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    margin: 40px;
+    font-size: 3rem;
+}
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+#searchField{
+  font-family: 'Poiret One', cursive; 
+  font-size: 1.50rem;
+  padding: 10px;
+}
+#searchButton {
+    font-size: 1.50rem; 
+}
+#searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+#showElementContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 10%;
+    box-shadow:3px 3px 7px gray;
+}
+#showElementContainer:hover {
+    transform: scale(1.1);
+    transition: all 0.7s ease;
+}
