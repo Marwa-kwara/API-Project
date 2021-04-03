@@ -1,3 +1,5 @@
+'use strict';
+
 import { renderSearchResult } from '../views/searchResult.view.js';
 
 export function searchMeal (query) {
@@ -11,7 +13,7 @@ export function searchMeal (query) {
         const searchResultsContainer = document.getElementById('searchResults');
         searchResultsContainer.innerHTML = ''
         data.forEach(element => {
-            const {idMeal, strMeal, strMealThumb} = element;
+            const {idMeal, strMeal, strMealThumb,} = element;
             renderSearchResult(idMeal, strMeal, strMealThumb);
             console.log(idMeal, 'strMeal : ' , strMeal); 
         });
