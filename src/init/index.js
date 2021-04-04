@@ -1,3 +1,3 @@
 'use strict';
 
-import '../listeners/search.listener.js';
+import '../listeners/searchMeal.listener.js';

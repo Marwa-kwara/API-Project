@@ -1,8 +1,18 @@
-h1, h2 {
+#main-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    background-color: beige;
+}
+h1, h4 {
     text-align: center;
     font-family: 'Poiret One', cursive;
-    margin: 40px;
+    margin: 60px;
     font-size: 3rem;
+}
+h4 {
+    font-size: 1.5rem;   
 }
 .searchContainer {
     display: flex;
@@ -35,3 +45,18 @@ h1, h2 {
     transform: scale(1.1);
     transition: all 0.7s ease;
 }
+#footerContainer {
+    display: flex;
+    justify-content: space-between;
+}
+#eggs {
+    text-align:center;
+  }
+  
+  svg{
+   position:absolute;
+    width:100%;
+    
+    visibility:hidden;
+    transform:translate(-50%, 0%);
+  }

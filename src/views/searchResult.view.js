@@ -1,6 +1,8 @@
 'use strict';
+import {specificMeal} from '../listeners/search-specific-meal.listener.js'
 
  export function renderSearchResult (idMeal, strMeal, strMealThumb){
+     console.log(idMeal)
     const showElementContainer = document.createElement('div');
     showElementContainer.setAttribute('id', 'showElementContainer');
 
@@ -18,8 +20,13 @@
     recipeButton.style.fontSize = '1.5rem'
     recipeButton.style.border = 'none';
     recipeButton.style.marginTop = '2px'
+    recipeButton.dataset.id = idMeal
     showElementContainer .appendChild(recipeButton);
     
     const searchResultsContainer = document.getElementById('searchResults');
     searchResultsContainer.appendChild(showElementContainer);
+
+    specificMeal();
+   
 }
+
