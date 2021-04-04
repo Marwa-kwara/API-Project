@@ -1,10 +1,10 @@
 'use strict';
 
 import { renderSearchResult} from '../views/searchResult.view.js';
-import {fetchSpecificMeal} from '../handlers/search-specific-meal.handler.js'
+//import {fetchSpecificMeal} from '../handlers/search-specific-meal.handler.js'
 
 export const fetchMeal = async () => {
-  const searchFieldElement = document.getElementById('searchField')
+  const searchFieldElement = document.getElementById('searchField');
   if (searchFieldElement.value.trim().length === 0){
       return;
   }
@@ -23,16 +23,16 @@ searchFieldElement.addEventListener("keyup", function(event) {
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
   const response = await fetch(url);
   const jsonData =  await response.json();
-  let id;
-      console.log(jsonData);
+  //let id;
+      //console.log(jsonData);
       const data = jsonData.meals;
-      console.log(data);
+      //console.log(data);
       const searchResultsContainer = document.getElementById('searchResults');
       searchResultsContainer.innerHTML = '';
-      footerContainer.innerHTML = ''
+      //footerContainer.innerHTML = ''
       data.forEach(element => {
           let {idMeal, strMeal, strMealThumb,} = element;
-          id = idMeal;
+          //id = idMeal;
           renderSearchResult(idMeal, strMeal, strMealThumb);
       });
    }

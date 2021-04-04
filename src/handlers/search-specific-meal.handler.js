@@ -1,11 +1,12 @@
 'use strict';
 import { renderSpecificMeal } from '../views/search-specific-meal.view.js';
-import {searchMeal} from '../handlers/fetchMeal.handler.js'
+//import {searchMeal} from '../handlers/fetchMeal.handler.js'
 
 export function fetchSpecificMeal () {
     const idButton = document.getElementById('recipeButton').dataset.id;
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idButton}`;
     console.log(idButton)
+
      const elementContainer = document.getElementById('img');
      elementContainer.src = ''
     fetch(url)
