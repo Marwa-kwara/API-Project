@@ -1,30 +1,28 @@
-'use strict';
-import { renderSpecificMeal } from '../views/search-specific-meal.view.js';
-//import {searchMeal} from '../handlers/fetchMeal.handler.js'
+"use strict";
+import { renderSpecificMeal } from "../views/search-specific-meal.view.js";
 
-export function fetchSpecificMeal () {
-    const idButton = document.getElementById('recipeButton').dataset.id;
-    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idButton}`;
-    console.log(idButton)
-
-     const elementContainer = document.getElementById('img');
-     elementContainer.src = ''
-    fetch(url)
-    .then(response => response.json())
+export function fetchSpecificMeal(idMeal) {
+  const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`;
+  const searchResults2 = document.getElementById("specificResultsContainer");
+  searchResults2.innerHTML = "";
+  const searchResultsContainer = document.getElementById("searchResults");
+  searchResultsContainer.innerHTML = "";
+  fetch(url)
+    .then((response) => response.json())
     .then((jsonData) => {
-        //console.log(jasonData);
-        const data = jsonData.meals;
-        //console.log(data);
-
-        data.forEach(element => {
-            const {idMeal, strMeal, strMealThumb, strInstructions, strYoutube} = element;
-            //console.log(idMeal, strMeal, strMealThumb, strInstructions, strYoutube); 
-            console.log(strYoutube)
-            renderSpecificMeal(strMeal, strMealThumb, strInstructions, strYoutube)
-        });
+      const data = jsonData.meals;
+      data.forEach((element) => {
+        const {
+          idMeal,
+          strMeal,
+          strMealThumb,
+          strInstructions,
+          strYoutube,
+        } = element;
+        renderSpecificMeal(strMeal, strMealThumb, strInstructions, strYoutube);
+      });
     })
     .catch((error) => {
-        console.log(error);
-    })
- }
-
+      console.log(error.stack);
+    });
+}

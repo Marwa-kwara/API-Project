@@ -1,9 +1,9 @@
-'use strict';
-import {fetchSpecificMeal} from '../handlers/search-specific-meal.handler.js'
+"use strict";
+import { fetchSpecificMeal } from "../handlers/search-specific-meal.handler.js";
 
-export const specificMeal = () =>{
-  const recipeButton = document.querySelector('#recipeButton');
-  recipeButton.addEventListener('click', () =>{
-    fetchSpecificMeal()
-}
-  )}
+export const specificMeal = (idMeal) => {
+  const recipeButton = document.querySelector(`button[data-id="${idMeal}"]`);
+  recipeButton.addEventListener("click", () => {
+    fetchSpecificMeal(idMeal);
+  });
+};
