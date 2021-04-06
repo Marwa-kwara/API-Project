@@ -23,6 +23,6 @@ export function fetchSpecificMeal(idMeal) {
       });
     })
     .catch((error) => {
-      console.log(error.stack);
+      console.log(error);
     });
 }
