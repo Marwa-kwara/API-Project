@@ -21,7 +21,6 @@ export function renderSearchResult(idMeal, strMeal, strMealThumb) {
   recipeButton.style.fontFamily = "Poiret One";
   recipeButton.style.fontSize = "1.5rem";
   recipeButton.style.fontWeight = "bold";
-  //recipeButton.style.border = "none";
   recipeButton.style.marginTop = "2px";
   recipeButton.dataset.id = idMeal;
   showElementContainer.appendChild(recipeButton);

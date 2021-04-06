@@ -50,5 +50,6 @@ export function renderSpecificMeal(
     "specificResultsContainer"
   );
   specificResultsContainer.appendChild(specificMealContainer);
+
   goBack();
 }

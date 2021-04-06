@@ -5,6 +5,4 @@ export function backFunction() {
   searchResultsContainer.innerHTML = "";
   const searchResults2 = document.getElementById("specificResultsContainer");
   searchResults2.innerHTML = "";
-  // const body = document.getElementById("main-container");
-  // body.style.backgroundImage = url("img1.jpeg");
 }
