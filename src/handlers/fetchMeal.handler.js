@@ -7,17 +7,12 @@ export const fetchMeal = () => {
   if (searchFieldElement.value.trim().length === 0) {
     return;
   } else {
-    searchFieldElement.addEventListener("keyup", function (event) {
-      if (event.keyCode === 13) {
-        searchButton.click();
-      }
-    });
     searchMeal(searchFieldElement.value);
     searchFieldElement.value = "";
   }
 };
 
-export async function searchMeal(query) {
+export function searchMeal(query) {
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
   fetch(url)
     .then((response) => response.json())
