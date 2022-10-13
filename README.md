@@ -1,4 +1,4 @@
-#Find your favorite meal
+# Find your favorite meal
 
 it is a javascript project where you can search how to make specific meal "as a request" and you get all the ingredients and the instructions ''as a response''
 
